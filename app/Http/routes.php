@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::auth();
+
+Route::get('/', 'DashController@index');
+
+require_once('api.php');
